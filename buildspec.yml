@@ -1,0 +1,10 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - pip install --upgrade awscli
+  build:
+    commands:
+      - zip function.zip lambda_function.py
+      - aws lambda update-function-code --function-name ImageProcessingLambda --zip-file fileb://function.zip
