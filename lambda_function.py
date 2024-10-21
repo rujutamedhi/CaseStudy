@@ -1,5 +1,6 @@
 import json
 import boto3
+
 def lambda_handler(event, context):
     # Log the event in CloudWatch
     print("Event: ", json.dumps(event))
@@ -12,6 +13,9 @@ def lambda_handler(event, context):
     # Process the image (log details in this case)
     response = s3.get_object(Bucket=bucket, Key=key)
     print(f"Processing file {key} from bucket {bucket}")
+
+    # New print statement for verification
+    print(f"Lambda function updated! Now processing {key} from {bucket}.")
 
     return {
         'statusCode': 200,
