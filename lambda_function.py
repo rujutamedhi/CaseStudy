@@ -16,7 +16,7 @@ def lambda_handler(event, context):
 
     # New print statement for verification
     print(f"Lambda function updated! Now processing {key} from {bucket}.")
-    print("updated")
+    print("again updated")
 
     return {
         'statusCode': 200,
