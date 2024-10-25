@@ -40,7 +40,7 @@ def lambda_handler(event, context):
     key = event['Records'][0]['s3']['object']['key']
     
     # Connect to MongoDB (replace with your MongoDB connection string)
-    client = MongoClient("mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority")
+    client = MongoClient("mongodb+srv://ShravaniAnilPatil:Shweta2509@cluster0.tspoa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     db = client['e-yojana']  # Replace with your database name
     collection = db['schemes']  # The name of your collection
 
