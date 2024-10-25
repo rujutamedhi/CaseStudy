@@ -16,7 +16,7 @@ def lambda_handler(event, context):
 
     # Send a notification through SNS
     sns_client = boto3.client('sns')
-    sns_topic_arn = "arn:aws:iam::476114155925:root"  # Replace with your SNS Topic ARN
+    sns_topic_arn = "arn:aws:sns:us-east-1:476114155925:notify"  # Replace with your SNS Topic ARN
     
     message = f"File {key} from bucket {bucket} has been processed successfully."
     
